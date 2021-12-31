@@ -4,6 +4,11 @@ import pandas as pd
 import os
 
 '''
+Script to pull job-quits data from the BLS Jobs Data API
+API Page here: https://www.bls.gov/bls/api_features.htm
+
+Using this data to see if King James caused LeGreat Resignation
+
 Using series ID for job
 "L" suffix gives level in thousands of quits "QU" in series id
 For more info, look here: 
@@ -51,7 +56,7 @@ def get_job_data(seriesid='JTU000000000000000QUL', start_year="2000", end_year="
 
 
 def format_jobs_data(path='data/job_quits.csv'):
-    '''Re-formats job_quits.csv file to match api response formatting'''
+    '''Re-formats job_quits.csv file to match BLS API response formatting'''
     # Data found here: https://data.bls.gov/pdq/SurveyOutputServlet
     df = pd.read_csv(path)
     df['value'] = df.value.astype(int)
@@ -67,4 +72,4 @@ if __name__ == "__main__":
 
     # Using Survery response formatted data
     data = format_jobs_data(os.path.join('data', 'job_quits.csv'))
-    data.to_csv(os.path.join('data', 'job_quits_formatted.csv'))
+    data.to_csv(os.path.join('data', 'job_quits_formatted.csv'), index=False)
