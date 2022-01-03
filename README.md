@@ -14,21 +14,26 @@ One unintended result of this was the effect of increased *[player mobility](htt
 ### The Great Resignation
 In the late summer/early fall of 2021, an interesting economic/sociological trend started to emerge. Americans were quitting their jobs, a lot. This phenomena was dubbed [The Great Resignation](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjGvZL8v5T1AhUiVd8KHbN-BAUQFnoECAYQAQ&url=https%3A%2F%2Fhbr.org%2F2021%2F09%2Fwho-is-driving-the-great-resignation&usg=AOvVaw1jXqO6RmcDmzn1kiE5YOgg) by some economists, who apparently need to prefix everything with "Great" (and I thought physicists were bad namers). This was caused by a host of factors, including, but not limited to: poor pay/working conditions, burnout, pandemic-related concerns, and others.
 
-One aspect that has changed in terms of americans' relationship with work is their general attitude. [Over 50%](https://www.cnbc.com/2021/08/25/great-resignation-55-percent-are-looking-to-change-jobs-over-the-next-year-.html) of Americans are seeking more flexibility in a new job, with a similar percentage seeking a new job within the next year. For better or worse, "loyalty" to one's company is starting to seem []outdated in the modern workplace](https://www.bbc.com/worklife/article/20210721-why-worker-loyalty-is-at-a-breaking-point). 
-
+One aspect that has changed in terms of americans' relationship with work is their general attitude. [Over 50%](https://www.cnbc.com/2021/08/25/great-resignation-55-percent-are-looking-to-change-jobs-over-the-next-year-.html) of Americans are seeking more flexibility in a new job, with a similar percentage seeking a new job within the next year. For better or worse, "loyalty" to one's company is starting to seem [outdated in the modern workplace](https://www.bbc.com/worklife/article/20210721-why-worker-loyalty-is-at-a-breaking-point). 
 
 The main question of this project is: *To what extent did LeBron's [The] Decision impact the increase in player mobility we've seen over the past few years in the NBA, and the rising attitube toward's a "free-agent" mentality in the general populace?* In other words, **Did LeBron James cause the '*Great Resignation*'**
 
 ## Methods
 To get concreate data to back up my half-baked idea, we utilized the [Bureau of Labor Statistics (BLS) Data API Docs](https://www.bls.gov/bls/api_features.htm). This handy-dandy API gives various economic data types. We mainly focused on their ["Job Quits"](https://www.bls.gov/news.release/jolts.t04.htm) statistic to get a sense of the rate at which Americans were leaving their jobs. The rationale behind choosing Job Quits over another statistic was that just like LeBron quit on Zyldrunas Ilgauskas for greener pastures, many americans are quitting their jobs in much the same way (minus the tv crew and Steve Levy). 
 
+We pulled monthly job quits data since the year 2000 from the BLS Data API. The results of this API call can be found in our `data` sub-directory in the csv file `job_quits_formatted.csv`. The Bureau of Labor Statistics has a handy [API Getting Started Guide](https://www.bls.gov/developers/). I'd really recommend it instead of continuing to read my garbage.
+
 
 ## Data
 To see if *The Decision* marked any change in how americans thought about their jobs, we'll need a handy time-series:
 
-![](img/time_serires_jobquits.png?raw=true)
+![Figure 1](img/time_series_jobquits.png?raw=true)
 
-While job quits do tend to follow seasonal patterns (see charts below), there is an uptick in the overall trend of quits post-*The Decision*. Several factors could account for this, but I'm going to pin it on LeBron because it helps my narrative.
+While job quits do tend to follow seasonal patterns (see charts below), there is an uptick in the overall trend of quits post-*The Decision*. Several factors could account for this, but I'm going to pin it on LeBron because it helps my narrative. In addition, the monthly average job quits before and after LeBron's *The Decision* is plotted below:
+
+![Figure 2](img/barplot_pre&post_quits.png?raw=true)
+
+As we can see, more americans each month quit their job on average after LeBron decided the east does not run through [Cleveland](https://youtu.be/XCSj6ezRiW0)
 
 ---
 ## Installation
