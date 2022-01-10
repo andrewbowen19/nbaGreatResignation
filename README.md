@@ -33,7 +33,29 @@ While job quits do tend to follow seasonal patterns (see charts below), there is
 
 ![Figure 2](img/barplot_pre&post_quits.png?raw=true)
 
-As we can see, more americans each month quit their job on average after LeBron decided the east does not run through [Cleveland](https://youtu.be/XCSj6ezRiW0)
+As we can see, more americans each month quit their job on average after LeBron decided the east does not run through [Cleveland](https://youtu.be/XCSj6ezRiW0).
+
+I know what you might be saying: "*But you can't prove that the Decision changed these numbers, just that it coincided with a shift*". In order to see if there was any causality in our time-series data, we'll need to create a model to "predict" the job quits numbers after *the Decision* based on pre-Decision data.
+
+We generated an [ARIMA model](https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima.model.ARIMA.html) using the `statstools` python library. The model is plotted below (in dark green) versus pre-Decision (light green) and post-decision (yellow) job quits. The ARIMA model should account for seasonality in our data, as job quits demonstrate this (Fig 2). 
+
+<!-- Job Quits predixction model plot -->
+![Figure 3](img/arima_job_quits_predict.png)
+
+Here are some model performance statistics:
+
+| Error Type | Value |
+|------------|-------|
+| MAPE    | 45.1%    |
+| MAE     | 1421779.6|
+| RMSE    | 1702394.8|
+
+With a 45% model accuracy, it's safe to say that a predictive model based on pre-Decision ob quits alone would not be accurate in forecasting post-Decision job quits. In other words, the increase in job quits after LeBron's *Decision* did not naturally follow the trend that was present pre-Decision.
+
+
+## Conclusions
+
+
 
 ---
 ## Installation
@@ -49,3 +71,10 @@ The notebook `job_data_vis.ipynb` can be used to visualize BLS API data.
 ## Useful Links
 * [Bureau of Labor Statistics (BLS) Data API Docs](https://www.bls.gov/bls/api_features.htm)
 * [Google Trends](https://trends.google.com/trends/explore?date=all&geo=US&q=How%20to%20change%20jobs)
+
+
+## TODO
+
+* [] Update README with process
+* [] Add in more robust predictive model to time-series analysis
+* [] Maybe add in a GitHub Pages-style html
