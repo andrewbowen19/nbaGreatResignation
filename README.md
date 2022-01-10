@@ -14,7 +14,7 @@ One unintended result of this was the effect of increased *[player mobility](htt
 ### The Great Resignation
 In the late summer/early fall of 2021, an interesting economic/sociological trend started to emerge. Americans were quitting their jobs, a lot. This phenomena was dubbed [The Great Resignation](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjGvZL8v5T1AhUiVd8KHbN-BAUQFnoECAYQAQ&url=https%3A%2F%2Fhbr.org%2F2021%2F09%2Fwho-is-driving-the-great-resignation&usg=AOvVaw1jXqO6RmcDmzn1kiE5YOgg) by some economists, who apparently need to prefix everything with "Great" (and I thought physicists were bad namers). This was caused by a host of factors, including, but not limited to: poor pay/working conditions, burnout, pandemic-related concerns, and others.
 
-One aspect that has changed in terms of americans' relationship with work is their general attitude. [Over 50%](https://www.cnbc.com/2021/08/25/great-resignation-55-percent-are-looking-to-change-jobs-over-the-next-year-.html) of Americans are seeking more flexibility in a new job, with a similar percentage seeking a new job within the next year. For better or worse, "loyalty" to one's company is starting to seem [outdated in the modern workplace](https://www.bbc.com/worklife/article/20210721-why-worker-loyalty-is-at-a-breaking-point). 
+One aspect that has changed in terms of americans' relationship with work is their general attitude. [Over 50%](https://www.cnbc.com/2021/08/25/great-resignation-55-percent-are-looking-to-change-jobs-over-the-next-year-.html) of Americans are seeking more flexibility in a new job, with a similar percentage seeking a new job within the next year. For better or worse, "loyalty" to one's company is starting to seem [outdated in the modern workplace](https://www.bbc.com/worklife/article/20210721-why-worker-loyalty-is-at-a-breaking-point). More employees are adhering to what is being dubbed the [*Free Agent Mentality*](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj3m_Xahab1AhVimuAKHRfFCFAQFnoECAMQAQ&url=https%3A%2F%2Fwww.zenbusiness.com%2Fblog%2Ffreeagent%2F&usg=AOvVaw3_yVCvyWUgmRP2Lz3Wc21a), with pages such as Reddit's [`r/antiwork`](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiG1u3shab1AhWKct8KHbZcBwcQFnoECAYQAQ&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fantiwork%2F&usg=AOvVaw2Hr6uxr_JryDBquuxzLnZW) [growing by over 1 million followers](https://subredditstats.com/r/antiwork) over the past year.
 
 The main question of this project is: *To what extent did LeBron's [The] Decision impact the increase in player mobility we've seen over the past few years in the NBA, and the rising attitube toward's a "free-agent" mentality in the general populace?* In other words, **Did LeBron James cause the '*Great Resignation*'**
 
@@ -39,8 +39,11 @@ I know what you might be saying: "*But you can't prove that the Decision changed
 
 We generated an [ARIMA model](https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima.model.ARIMA.html) using the `statstools` python library. The model is plotted below (in dark green) versus pre-Decision (light green) and post-decision (yellow) job quits. The ARIMA model should account for seasonality in our data, as job quits demonstrate this (Fig 2). 
 
+#### A note on worker sentiment
+While datasets on job quits and turnover rate is publically available, we have had a more difficult time in finding job sentiment and worker outlook data. This makes it difficult to prove a causal link between LeBron's free agency move and a reflection of the same attitude and thought process in the average american worker. If there is a dataset/survey on american's attitudes towards work environments, I'm all ears.
+
 <!-- Job Quits predixction model plot -->
-![Figure 3](img/arima_job_quits_predict.png)
+![Figure 3](img/arima_job_quits_predict.png?raw=true)
 
 Here are some model performance statistics:
 
@@ -54,7 +57,7 @@ With a 45% model accuracy, it's safe to say that a predictive model based on pre
 
 
 ## Conclusions
-
+Using BLS Job Quits data, we have shown that the increase in job quits after LeBron James' *Decision* to join the Miami Heat for the 2010-2011 season is a deviation from the previous 10 years of job quit data. There may be a confluence of factors that created this reversal. The downturn of the U.S. Economy in 2008 following the financial crisis may have aided job quits in reaching an all-time low, only for them to rebound as the economy recovered. In addition, current lack of quantitative data makes it difficult to prove a causal link between LeBron's free agency milestone, and the current outlook and attitude of employees. 
 
 
 ---
