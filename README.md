@@ -53,11 +53,13 @@ Here are some model performance statistics:
 | MAE     | 1421779.6|
 | RMSE    | 1702394.8|
 
-With a 45% model accuracy, it's safe to say that a predictive model based on pre-Decision ob quits alone would not be accurate in forecasting post-Decision job quits. In other words, the increase in job quits after LeBron's *Decision* did not naturally follow the trend that was present pre-Decision.
+With a 45% model accuracy, it's safe to say that a predictive model based on pre-Decision ob quits alone would not be accurate in forecasting post-Decision job quits. In other words, the increase in job quits after LeBron's *Decision* did not naturally follow the trend that was present pre-Decision. However, we'll need to prove causality (or a lack thereof) between the general decreasing trend of job quits pre-*Decision* vs post-*Decision*.
 
 
 ## Conclusions
 Using BLS Job Quits data, we have shown that the increase in job quits after LeBron James' *Decision* to join the Miami Heat for the 2010-2011 season is a deviation from the previous 10 years of job quit data. There may be a confluence of factors that created this reversal. The downturn of the U.S. Economy in 2008 following the financial crisis may have aided job quits in reaching an all-time low, only for them to rebound as the economy recovered. In addition, current lack of quantitative data makes it difficult to prove a causal link between LeBron's free agency milestone, and the current outlook and attitude of employees. 
+
+One thing is for certain, however. LeBron James did change the face and protocol of NBA Free Agency. with *The Decision*, he created a seismic shifts in thebalance of power in the NBA. One could also argue he created a ripple effect into the mindset of the average american worker, turning us all into free agents.
 
 
 ---
